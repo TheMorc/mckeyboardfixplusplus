@@ -87,6 +87,47 @@ public final class MCKeyboardFix {
         }
     }
 
+    private static void fixSlotSwitchingOnASlovakKeyboard(char keyCode) {
+                // System.out.println("h");
+        switch (keyCode) {
+            case 'í':
+            case 'Í':
+                pressKey(KEY_9);
+                break;
+            case 'á':
+            case 'Á':
+                pressKey(KEY_8);
+                break;
+            case 'ý':
+            case 'Ý':
+                pressKey(KEY_7);
+                break;
+            case 'ž':
+            case 'Ž':
+                pressKey(KEY_6);
+                break;
+            case 'ť':
+            case 'Ť':
+                pressKey(KEY_5);
+                break;
+            case 'č':
+            case 'Č':
+                pressKey(KEY_4);
+                break;
+            case 'š':
+            case 'Š':
+                pressKey(KEY_3);
+                break;
+            case 'ľ':
+            case 'Ľ':
+                pressKey(KEY_2);
+                break;
+            case '+':
+                pressKey(KEY_1);
+                break;
+        }
+    }
+
     @Mod.EventHandler
     public void onFMLInitialization(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
@@ -95,6 +136,9 @@ public final class MCKeyboardFix {
     @SubscribeEvent
     public void onInput(InputEvent.KeyInputEvent event) {
         int keyCode = getEventKey();
+        char keyChar = getEventCharacter();
+        System.out.println(keyCode);
         fixShiftIssue(keyCode);
+        fixSlotSwitchingOnASlovakKeyboard(keyChar);
     }
 }
