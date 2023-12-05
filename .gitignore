@@ -22,3 +22,6 @@ build
 # other
 eclipse
 run
+
+#macos
+.DS_Store

@@ -1,11 +1,17 @@
-This directory contains the sources of Minecraft Keyboard Fix.
+This repo contains the sources of Minecraft Keyboard Fix PlusPlus.
 
-Minecraft Keyboard Fix is a lightweight Minecraft Forge mod that performs
-keyboard fix for Minecraft running on GNU/Linux distributions.
+Minecraft Keyboard Fix PlusPlus is a fork of the original and lightweight
+Minecraft Forge mod that fixes keyboard issues in Minecraft on LWJGL 2.
 
-Users who play Minecraft on GNU/Linux might encounter an issue where the
-"Shift-2" and "Shift-6" key combinations are not working, which is resolved by
-this mod.
+This mod is configurable with a config file to give you absolute freedom
+with fixing layout problems on various keyboard layouts.
+
+WARNING: The default config is currently set up to fix issues on the Slovak
+keyboard layout. You can configure it by launching the game once with the mod
+and then replacing keyCharsOriginal list with keys that you wish to be remapped.
+The keyCharsRemapped list has integer values of remapped keys,
+check the link below for reference as to what values to use in it.
+https://legacy.lwjgl.org/javadoc/constant-values.html#org.lwjgl.input.Keyboard
 
 Minecraft Keyboard Fix supports Minecraft 1.8.9, 1.9.x, 1.10.x, 1.11.x, and
 1.12.x. Since the keyboard issue no longer exists since Minecraft 1.13, this
